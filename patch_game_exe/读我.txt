@@ -1,0 +1,17 @@
+因为本人汇编技术不太行，snr校验算法和zlib的压缩校验算法实在爬不出来，只能强制跳过snr校验和zlib的压缩校验了
+为了让游戏使用gb2312字符集，必须要patch一个地方，这样才能显示很多中文。不然很多中文都显示不出来。
+
+一共patch了三个地方
+snr校验跳过
+zlib校验跳过
+shiftjis字符集改gb2312字符集
+
+详细patch位置请看 patch.txt
+
+本目录下的 tukikage.exe 和 tuki_fun.exe 为已patch游戏文件
+原始文件为 tuki_fun.exe.ori 和 tuki_fun.exe.ori 为原始游戏文件
+
+调试工具 x32dbg
+以下汇编调试历史可以用调试 x32dbg加载
+tukikage.exe 调试记录.dd32
+tuki_fun.exe 调试记录.dd32

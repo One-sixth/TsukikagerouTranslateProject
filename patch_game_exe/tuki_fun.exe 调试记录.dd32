@@ -1,0 +1,1283 @@
+{
+ "comments": [
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x75A84",
+   "manual": true,
+   "text": "arc打开。代码末"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x55D35",
+   "manual": true,
+   "text": "就是这里了，zlib校验码检查的地方，这里要改成jmp"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x7595F",
+   "manual": true,
+   "text": "这里可以发现在读取arc文件"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37831",
+   "manual": true,
+   "text": "把字符串转成小写？"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1BEF",
+   "manual": true,
+   "text": "读取snr文件"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3799B",
+   "manual": true,
+   "text": "这里似乎在读取ARC文件表"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376C3",
+   "manual": true,
+   "text": "读入加密的snr内容进入缓冲区"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3A77A",
+   "manual": true,
+   "text": "这个函数里面已经在准备读取snr文件了"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37600",
+   "manual": true,
+   "text": "这一段是字符串拼接"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x5337F",
+   "manual": true,
+   "text": "snr文件读取完成"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53498",
+   "manual": true,
+   "text": "这里在读ARC文件了"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1BDD",
+   "manual": true,
+   "text": "这里面在读arc文件"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14A31",
+   "manual": true,
+   "text": "这里是snr校验码生成的函数"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532F2",
+   "manual": true,
+   "text": "读取加密的snr内容进入缓冲区"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1442F",
+   "manual": true,
+   "text": "这里要进行处理，这里是对snr的内容判断校验码正确还是错误的地方"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14431",
+   "manual": true,
+   "text": "跳转代表失败"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14894",
+   "manual": true,
+   "text": "snr解密函数"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x55D13",
+   "manual": true,
+   "text": "就在这附近，要进行zlib校验码跳过"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14496",
+   "manual": true,
+   "text": "成功要跳转"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53293",
+   "manual": true,
+   "text": "不应该执行"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x5327E",
+   "manual": true,
+   "text": "可能是从arc中检索snr位置"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532AD",
+   "manual": true,
+   "text": "与SNR头比对，这里snr已经读出，esp+14就是snr起始地址"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532C3",
+   "manual": true,
+   "text": "不应该执行"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532CF",
+   "manual": true,
+   "text": "esp+18是压缩大小，这里读入压缩大小到edx"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532DB",
+   "manual": true,
+   "text": "esp+20是解压大小，这里读入解压大小"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532E5",
+   "manual": true,
+   "text": "读入压缩大小"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53314",
+   "manual": true,
+   "text": "cgf解密"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376C1",
+   "manual": true,
+   "text": "压缩大小"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376C2",
+   "manual": true,
+   "text": "缓冲区地址"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532FF",
+   "manual": true,
+   "text": "snr解密函数"
+  }
+ ],
+ "labels": [
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3B2F0",
+   "manual": true,
+   "text": "画图的函数"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53220",
+   "manual": true,
+   "text": "清空一片内存"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x15A30",
+   "manual": true,
+   "text": "这里获得了要读取的snr文件的名字"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x534D0",
+   "manual": true,
+   "text": "检索目标snr文件是否存在？"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x544C0",
+   "manual": true,
+   "text": "这个函数似乎只是在画图"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53B20",
+   "manual": true,
+   "text": "失败跳转"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14A20",
+   "manual": true,
+   "text": "snr校验码生成"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53240",
+   "manual": true,
+   "text": "读取snr文件"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x535A0",
+   "manual": true,
+   "text": "好像没干什么事"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3A760",
+   "manual": true,
+   "text": "这里是画图的消息循环！"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x144D0",
+   "manual": true,
+   "text": "CGF解密函数"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x55AF6",
+   "manual": true,
+   "text": "可能对snr内容进行解压的地方"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147C0",
+   "manual": true,
+   "text": "老的Snr解密函数1"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14780",
+   "manual": true,
+   "text": "老的Snr解密函数2"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x55B0D",
+   "manual": true,
+   "text": "肯定对snr内容进行解压的地方"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6C312",
+   "manual": true,
+   "text": "分配缓冲区，eax的缓冲区地址"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53390",
+   "manual": true,
+   "text": "snr解密函数"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376A0",
+   "manual": true,
+   "text": "读取加密snr内容进入缓冲区"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6CC3B",
+   "manual": true,
+   "text": "读取加密的snr内容进入缓冲区"
+  }
+ ],
+ "bookmarks": [
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x144D0",
+   "manual": true
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1442F",
+   "manual": true
+  }
+ ],
+ "functions": [
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x1BEF",
+   "end": "0x1D0C",
+   "icount": "0x60",
+   "manual": false,
+   "parent": "0x1BEF"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x14780",
+   "end": "0x147B0",
+   "icount": "0x1A",
+   "manual": false,
+   "parent": "0x14780"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x147C0",
+   "end": "0x147F0",
+   "icount": "0x1A",
+   "manual": false,
+   "parent": "0x147C0"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x376A0",
+   "end": "0x376D6",
+   "icount": "0x13",
+   "manual": false,
+   "parent": "0x376A0"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x37A20",
+   "end": "0x37B25",
+   "icount": "0x5B",
+   "manual": false,
+   "parent": "0x37A20"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x53240",
+   "end": "0x5337F",
+   "icount": "0x62",
+   "manual": false,
+   "parent": "0x53240"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x53390",
+   "end": "0x533CE",
+   "icount": "0x1F",
+   "manual": false,
+   "parent": "0x53390"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x6CC3B",
+   "end": "0x6CC69",
+   "icount": "0x12",
+   "manual": false,
+   "parent": "0x6CC3B"
+  }
+ ],
+ "autoloops": [
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x14792",
+   "end": "0x147AC",
+   "depth": 0,
+   "parent": "0x0",
+   "icount": "0xF"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x147D2",
+   "end": "0x147EC",
+   "depth": 0,
+   "parent": "0x0",
+   "icount": "0xF"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x37A8A",
+   "end": "0x37AD5",
+   "depth": 0,
+   "parent": "0x0",
+   "icount": "0x1F"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x533A3",
+   "end": "0x533C9",
+   "depth": 0,
+   "parent": "0x0",
+   "icount": "0x12"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x147A2",
+   "end": "0x147A6",
+   "depth": 1,
+   "parent": "0x14792",
+   "icount": "0x3"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x147E2",
+   "end": "0x147E6",
+   "depth": 1,
+   "parent": "0x147D2",
+   "icount": "0x3"
+  },
+  {
+   "module": "tuki_fun.exe",
+   "start": "0x37A90",
+   "end": "0x37AAE",
+   "depth": 1,
+   "parent": "0x37A8A",
+   "icount": "0xE"
+  }
+ ],
+ "xrefs": [
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53490",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1BEF",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x544C0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C5D",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x20A0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1CF9",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1C11",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1BF6",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53B20",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C08",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x1D04",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x535A0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C1D",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1C81",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C7B",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3A760",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C30",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x1CCB",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x1C43",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x3B2F0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C8D",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376D4",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x376AA",
+     "type": "0x2"
+    },
+    {
+     "addr": "0x376B4",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x1CF7",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1C7F",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37AE5",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37A3C",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6CC3B",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x376C3",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37ADB",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37A7F",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37AB4",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37A96",
+     "type": "0x2"
+    },
+    {
+     "addr": "0x37AA4",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37AF4",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37ACD",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37ACF",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37ABB",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37AB0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37A9A",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x144D0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53314",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37A8A",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37AD5",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6C312",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532D4",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x532E0",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37B16",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37AC6",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x142C0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53262",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14300",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532C3",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x53293",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x53366",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x53349",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37AB9",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37AB2",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37A90",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37AAE",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376E0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x37B0B",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x376A0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532A8",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x532F2",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53390",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532FF",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x7BF88",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53242",
+     "type": "0x1"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x37A20",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x5327E",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x143F0",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53321",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x5329F",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53285",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x532CF",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532B5",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x5336D",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x532CA",
+     "type": "0x2"
+    },
+    {
+     "addr": "0x5329A",
+     "type": "0x2"
+    },
+    {
+     "addr": "0x53350",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147A2",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147A6",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147E2",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147E6",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x53352",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x5332D",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6C307",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x53352",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x5332F",
+     "type": "0x3"
+    },
+    {
+     "addr": "0x53335",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x533CB",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x533A1",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x533C5",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x533AE",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x533A3",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x533C9",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6D964",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x6CC42",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6CC6A",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x6CC53",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x6D9B6",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x6CC5D",
+     "type": "0x3"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x14792",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147AC",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147D2",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147EC",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147AE",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x14790",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147EE",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147D0",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147A8",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x1479D",
+     "type": "0x2"
+    }
+   ]
+  },
+  {
+   "module": "tuki_fun.exe",
+   "address": "0x147E8",
+   "manual": false,
+   "references": [
+    {
+     "addr": "0x147DD",
+     "type": "0x2"
+    }
+   ]
+  }
+ ],
+ "breakpoints": [
+  {
+   "address": "0x1BEF",
+   "enabled": true,
+   "oldbytes": "0x9CE8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x1442F",
+   "enabled": false,
+   "oldbytes": "0x739",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x14462",
+   "enabled": true,
+   "oldbytes": "0x8FE8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x144D0",
+   "enabled": true,
+   "oldbytes": "0x8B55",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x14780",
+   "enabled": true,
+   "oldbytes": "0x4C8B",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x147C0",
+   "enabled": true,
+   "oldbytes": "0x4C8B",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x14894",
+   "enabled": true,
+   "oldbytes": "0x27E8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x14A20",
+   "enabled": true,
+   "oldbytes": "0x548B",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x3E4BD",
+   "enabled": true,
+   "oldbytes": "0xDEE8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x3E507",
+   "enabled": true,
+   "oldbytes": "0xC4E8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x53240",
+   "enabled": true,
+   "oldbytes": "0xFF6A",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x53314",
+   "enabled": true,
+   "oldbytes": "0xB7E8",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x53390",
+   "enabled": true,
+   "oldbytes": "0x4C8B",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x55D35",
+   "enabled": false,
+   "oldbytes": "0x840F",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "tuki_fun.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "fastResume": false,
+   "silent": false
+  }
+ ],
+ "hashAlgorithm": "murmurhash",
+ "hash": "0x51AAC0BF"
+}
