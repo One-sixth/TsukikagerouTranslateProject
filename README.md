@@ -5,7 +5,7 @@ Tsukikagerou Translate Project
 本项目所有工具均开源  
 其中  
 编译 C++ 项目需要 VS2019 和 C++20 版本的支持。  
-编译 Python3.9 项目需要 Python3.9 或更新版本。  
+运行 Python 项目需要 Python3.9 或更新版本。  
 
 # 状态
 此项目长期开放，等待有爱的大佬和文豪前来加工。  
@@ -36,7 +36,7 @@ Tsukikagerou Translate Project
 /月阳炎                     月阳炎翻译工作目录  
 /千秋恋歌                   千秋恋歌翻译工作目录  
 /cache_tr.json              翻译字典  
-/cache_tr.json.bak          翻译字典备份，防止翻译字典意外损坏导致的翻译数据丢失  
+/cache_tr.json.bak          翻译字典自动备份，防止翻译字典意外损坏导致的翻译数据丢失  
 /install_requirement.cmd    翻译工具的依赖包安装脚本  
 /README.md                  本文档  
 
@@ -51,12 +51,15 @@ Tsukikagerou Translate Project
 解压后，覆盖到游戏的根目录，好了，翻译完成。  
 存档是通用。你可能会看到存档名称是乱码和读取后第一句话是乱码，这是正常现象。  
 
-# 仓库使用步骤，如果你只想使用翻译补丁，请看上面的翻译补丁使用步骤，不要看我
-## 第一步下载本仓库。
+# 使用仓库内工具手动汉化的步骤
+## 如果你只想使用翻译补丁，请看上面的翻译补丁使用步骤，不用看下面
+## 注意！如果你要看的你翻译是否有效，记得在要翻译的本句话的之前存档。因为读档后的显示的第一句话，是通过读取存档文件获得的，而不是从游戏剧本文件中获得的，因而会看不到你的翻译改动！
+
+## 第一步，下载本仓库。
 自己找办法。。。  
 
 ## 第二步，替换掉游戏的启动文件
-进入 patch_game_exe 文件夹。找到里面的
+进入 patch_game_exe 文件夹。找到里面的 tuki_fun.exe 和 tukikage.exe，然后替换掉原始游戏文件。
 
 ## 第三步，安装翻译工具所需的python3和依赖库
 安装python 3.9或以上的版本  
@@ -103,8 +106,9 @@ Tsukikagerou Translate Project
 现在你可以启动游戏，看到游戏被翻译了！  
 
 # 第九步，更新翻译
+## 注意先把你的 cache_tr.json 文件备份一份，便于修改错地方导致无法封包。
 cache_tr.json 是json格式的翻译字典  
-左边的日文文本千万不要动。你可以更新右边的翻译文本。  
+左边的日文文本千万不要动。你要更新的只有右边的翻译文本。  
 当你修正完翻译字典后，保存。  
 现在，你只需要按顺序执行以下脚本，文件夹 7.月阳炎-ARC打包后 就可以看到已更新翻译的已打包文件  
 ```
@@ -127,6 +131,6 @@ cache_tr.json 是json格式的翻译字典
 # 参考和引用
 https://github.com/morkt/GARbro GAL游戏资源通用浏览器，ARC打包解包算法和月阳炎的完整的SNR解密算法来自这里  
 https://github.com/nlohmann/json C++项目中使用的单头json库，真的非常好用  
-https://github.com/fxfactorial/sdefl C++项目中使用的单头deflate压缩和解压库，也非常好用，只是可能会出现堆栈溢出的问题。  
-https://github.com/jarro2783/cxxopts C++项目中使用的单头命令行工具，非常ok。
+https://github.com/fxfactorial/sdefl C++项目中使用的单头deflate压缩和解压库，也非常好用，只是可能会出现堆栈溢出的问题  
+https://github.com/jarro2783/cxxopts C++项目中使用的单头命令行工具，非常ok  
 千秋恋歌的snr解密加密算法是从游戏里面爬出来的。  
