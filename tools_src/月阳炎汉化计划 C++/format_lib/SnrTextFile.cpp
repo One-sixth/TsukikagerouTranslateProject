@@ -108,6 +108,7 @@ void SnrTextFileReader::load_pack_file(string file)
 				// 因为分支块可以有多个语句，所以这里的字符串是特殊构造，用0字节分隔
 				// python那边记得处理
 				block = Block();
+				block.is_branch_block = true;
 				block.before_data = vector<uint8_t>(bb.begin(), bb.begin()+14);
 				block.text_data = vector<uint8_t>(bb.begin()+14, bb.begin()+null_pos.back());
 				block.after_data = vector<uint8_t>(bb.begin()+null_pos.back(), bb.end());
@@ -125,7 +126,7 @@ void SnrTextFileReader::load_pack_file(string file)
 			//if (found_blance_block > 0 && bb.size() == 0x13-2)
 			if (bb.size() == 0x13-2 || bb.size() == 0x12 - 2)
 			{
-				// 可能确认了
+				// 可能确认了，这个值固定是长跳转值
 				int16_t g_off = *(int16_t*)(bb.data() + 2);
 				if (g_off == 0)
 					return;
@@ -237,6 +238,12 @@ void SnrTextFileReader::load_pack_file(string file)
 	* 因为那个偏移指向的块似乎是比较固定的，并且对辅助块，我这里不会做任何打乱顺序的事情
 	*
 	*/
+
+	// TODO
+	/*
+	* 新的处理，分支块前面，有时会有长跳转块，长跳转会跳到分支块文本最后一个文本的后面，这里要特殊处理了。
+	* 如果分支块前是一个长跳转块，修改该长跳转块的跳转地址
+	*/
 }
 
 void SnrTextFileReader::save_unpack_file(string file)
@@ -260,6 +267,7 @@ void SnrTextFileReader::save_unpack_file(string file)
 		node["before_data"] = tmp_before_data;
 		node["text_data"] = tmp_text_data;
 		node["after_data"] = tmp_after_data;
+		node["is_branch_block"] = b.is_branch_block;
 		node["is_offset_block"] = b.is_offset_block;
 		node["rel_offset"] = b.rel_offset;
 
@@ -305,11 +313,13 @@ void SnrTextFileWriter::load_unpack_file(string file)
 		auto tmp_after_data = Base64::decode(tmp_s_after_data);
 
 		auto tmp_is_offset_block = (*it)["is_offset_block"].get<bool>();
+		auto tmp_is_branch_block = (*it)["is_branch_block"].get<bool>();
 		auto tmp_rel_offset = (*it)["rel_offset"].get<int>();
 
 		new_block.before_data = tmp_before_data;
 		new_block.text_data = tmp_text_data;
 		new_block.after_data = tmp_after_data;
+		new_block.is_branch_block = tmp_is_branch_block;
 		new_block.is_offset_block = tmp_is_offset_block;
 		new_block.rel_offset = tmp_rel_offset;
 		block_list.push_back(new_block);
@@ -324,18 +334,45 @@ void SnrTextFileWriter::save_pack_file(string file)
 {
 	ofstream f = file_utils::OpenBinFileWrite(file);
 
+	// 尝试找到分支块和得到分支块的起始位置
+	auto find_branch_block = [this](int cur_block_id, int cur_block_begin_offset, int max_try, int& out_branch_block_id, int& out_branch_block_begin_offset) -> void
+	{
+		int off = cur_block_begin_offset + block_list[cur_block_id].size();
+		int branch_block_id = -1;
+		for (int bid = cur_block_id+1; bid < min(cur_block_id + 1 + max_try, (int)block_list.size()); ++bid)
+		{
+			off += 2;
+			if (block_list[bid].is_branch_block)
+			{
+				branch_block_id = bid;
+				break;
+			}
+			else
+			{
+				off += block_list[bid].size();
+			}
+		}
+
+		out_branch_block_id = branch_block_id;
+		out_branch_block_begin_offset = off;
+
+	};
+
 	if (file_type == "snr_text")
 	{
 		file_utils::Write(f, header);
 
-		for (const Block& b : block_list)
+		bool found_branch = false;
+
+		for (int cur_block_id = 0; cur_block_id < block_list.size(); ++cur_block_id)
 		{
+			const Block& b = block_list[cur_block_id];
+
 			// 不要忘记+2，+2是下一次读取的大小
-			auto ori_block_size =\
-				b.before_data.size() + b.text_data.size() + b.after_data.size() + 2;
+			auto ori_block_size = b.size() + 2;
 
 			if (ori_block_size >= 0xffff)
-				throw runtime_error("Error! Block is bigger than 0xff.");
+				throw runtime_error("Error! Block is bigger than 0xffff.");
 
 			unsigned short block_size = ori_block_size;
 			file_utils::WriteType(f, block_size);
@@ -347,8 +384,26 @@ void SnrTextFileWriter::save_pack_file(string file)
 			{
 				int16_t cur_block_begin = (int16_t)f.tellp();
 				int16_t& target_offset = *(int16_t*)(tmp_before_data.data() + 2);
-				target_offset = b.rel_offset + cur_block_begin;
+
+				int out_branch_bid = -1;
+				int out_branch_block_begin_offset = -1;
+				find_branch_block(cur_block_id, cur_block_begin, 3, out_branch_bid, out_branch_block_begin_offset);
+
+				if (out_branch_bid == -1 || found_branch || b.rel_offset < 40)
+				{
+					// 大部分时候都在分支块后面
+					// 部分时候独立存在
+					// cout << "Found offset block not need with branch! " << file << " " << cur_block_id << endl;
+					target_offset = b.rel_offset + cur_block_begin;
+				}
+				else
+				{
+					// 如果后面有分支块
+					target_offset = out_branch_block_begin_offset + block_list[out_branch_bid].size() - 2;
+				}
 			}
+
+			found_branch = found_branch || b.is_branch_block;
 
 			file_utils::Write(f, tmp_before_data);
 			file_utils::Write(f, b.text_data);

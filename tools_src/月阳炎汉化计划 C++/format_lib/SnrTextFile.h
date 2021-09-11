@@ -31,6 +31,7 @@ public:
 		vector<uint8_t>	after_data;
 
 		bool	is_offset_block = false;
+		bool	is_branch_block = false;
 		int16_t	rel_offset = 0;
 	};
 
@@ -63,8 +64,15 @@ public:
 		vector<uint8_t>	text_data;
 		vector<uint8_t>	after_data;
 
+		bool	is_branch_block = false;
 		bool	is_offset_block = false;
 		int16_t	rel_offset = 0;
+
+	public:
+		inline int size() const
+		{
+			return before_data.size() + text_data.size() + after_data.size();
+		}
 	};
 
 public:
