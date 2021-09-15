@@ -69,7 +69,7 @@ void SnrTextFileReader::load_pack_file(string file)
 			uint16_t m;
 			memcpy_s(&m, 2, bb.data() + 8, 2);
 
-			if (m == 0xC8)
+			if (m == 0xC8 || m == 0xC9)
 			{
 				// 成功发现分支块
 				found_blance_block += 1;
