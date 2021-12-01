@@ -9,6 +9,7 @@ Tsukikagerou Translate Project
 
 # 状态
 此项目长期开放，等待有爱的大佬和文豪前来加工。  
+欢迎提交 ISSUE 或 PR。  
 
 当前翻译字典已由本人轻微处理了下，简单用查找替换修正了人称的一些错误。  
 
