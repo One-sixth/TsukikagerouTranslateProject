@@ -25,6 +25,10 @@ Tsukikagerou Translate Project
 - [ ] 人工汉化
 - [ ] 文本校对
 - [ ] 需要大文豪润色！
+- [x] 改CG
+
+目前已有的贡献人员，OMX, 鱊之不一, 心, 落果糜烂, PMM  
+非常感谢他们!  
 
 # 现成的翻译补丁  
 你可以在Release里面下载最新的翻译补丁。  
@@ -122,6 +126,20 @@ cache_tr.json 是json格式的翻译字典
 
 # 千秋恋歌的翻译方式与上方说明的操作一致。
 
+# CG修图（人力部分）
+## 1.解包图像
+请使用 GARbro软件 解包 月阳炎 和 千秋恋歌 的 graphic.arc 和 graphic2.arc  
+并将解包后的全部文件分别放入 改CG/graphic 和 改CG/graphic2 文件夹中  
+
+## 2.修改图像
+没有自动方法，全靠人力。。。  
+请备份原始的 改CG/graphic 和 改CG/graphic2 文件夹  
+然后用修改图像替换掉原来的图像  
+
+## 3.打包修改后图像
+双击运行 改CG/1.月阳炎CG打包.bat 开始打包，打包后的文件可以在 改CG/out 文件夹里面找到  
+千秋恋歌的打包也是同理操作  
+
 # 使用协议
 本仓库内的origin文件夹的内容由它们本身的协议限制。  
 本仓库内所有代码均使用GPLv3协议，除此以外，还包含以下限制。  
@@ -130,6 +148,8 @@ cache_tr.json 是json格式的翻译字典
 如果你希望基于本仓库将其游戏翻译为其他语言，请在遵守以上协议的情况进行即可。  
 
 # 参考和引用
+感谢PMM大佬编写png2cgf工具！现在我们能修改CG图像了！  
+
 https://github.com/morkt/GARbro GAL游戏资源通用浏览器，ARC打包解包算法和月阳炎的完整的SNR解密算法来自这里  
 https://github.com/nlohmann/json C++项目中使用的单头json库，真的非常好用  
 https://github.com/fxfactorial/sdefl C++项目中使用的单头deflate压缩和解压库，也非常好用，只是可能会出现堆栈溢出的问题  

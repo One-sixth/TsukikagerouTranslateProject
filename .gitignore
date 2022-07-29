@@ -1,5 +1,7 @@
 /千秋恋歌/*/*
 /月阳炎/*/*
+/改CG/graphic*/*.*
+/改CG/*_graphic*/*.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
