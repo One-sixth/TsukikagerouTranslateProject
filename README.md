@@ -27,7 +27,7 @@ Tsukikagerou Translate Project
 - [ ] 需要大文豪润色！
 - [x] 改CG
 
-目前已有的贡献人员，OMX, 鱊之不一, 心, 落果糜烂, PMM  
+目前已有的贡献人员，OMX, 鱊之不一, 心, 落果糜烂, PMM, 查拉图斯特拉  
 非常感谢他们!  
 
 # 现成的翻译补丁  
