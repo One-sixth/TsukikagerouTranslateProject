@@ -82,7 +82,7 @@ Tsukikagerou Translate Project
 进入 月阳炎 文件夹。  
 
 ## 第六步，填入你的百度翻译APPID和KEY
-用文本编辑器打开 "4.月阳炎-翻译导出的文本.cmd" 脚本。 推荐使用Notepad++
+用文本编辑器打开 "4.月阳炎-翻译导出的文本.cmd" 脚本。
 如果你跳过了第二步  
 把 --baidu_appid=XXXX 的 XXXX 改为 ""  
 把 --baidu_key=XXXX 的 XXXX 改为 ""  
